@@ -443,7 +443,7 @@ def get_user_input_and_predict():
         print("\n" + "="*60)
         print("PREDICTION RESULTS")
         print("="*60)
-        print(f"\n🚗 Car Details Summary:")
+        print(f"\n Car Details Summary:")
         print(f"   • Year: {yr_mfr}")
         print(f"   • Kilometers: {kms_run:,}")
         print(f"   • Car Age: {car_age} years")
@@ -453,26 +453,26 @@ def get_user_input_and_predict():
         print(f"   • Transmission: {transmission}")
         print(f"   • Manufacturer: {make}")
         
-        print(f"\n💰 PREDICTED SALE PRICE: ₹{predicted_price:,.2f}")
+        print(f"\n PREDICTED SALE PRICE: ₹{predicted_price:,.2f}")
         
         category = "PREMIUM" if is_premium_pred else "BUDGET"
-        print(f"\n📊 Category: {category} (Confidence: {premium_prob*100:.1f}%)")
+        print(f"\n Category: {category} (Confidence: {premium_prob*100:.1f}%)")
         print(f"   (Threshold: ₹{median_price:,.2f})")
         
         # Price range estimate
         mae = mean_absolute_error(y_test, y_pred_test)
-        print(f"\n📈 Estimated Price Range:")
+        print(f"\n Estimated Price Range:")
         print(f"   • Lower: ₹{max(0, predicted_price - mae):,.2f}")
         print(f"   • Upper: ₹{predicted_price + mae:,.2f}")
         
         return predicted_price
         
     except ValueError as e:
-        print(f"\n❌ Error: Invalid input. Please enter valid values.")
+        print(f"\n Error: Invalid input. Please enter valid values.")
         print(f"   Details: {e}")
         return None
     except Exception as e:
-        print(f"\n❌ Error: {e}")
+        print(f"\n Error: {e}")
         return None
 
 # ============================================================================
@@ -484,12 +484,12 @@ print("SECTION 7: SUMMARY")
 print("="*80)
 
 print("\n--- MODEL PERFORMANCE SUMMARY ---")
-print("\n📈 LINEAR REGRESSION (Price Prediction):")
+print("\n LINEAR REGRESSION (Price Prediction):")
 print(f"   • R² Score (Test): {r2_score(y_test, y_pred_test):.4f}")
 print(f"   • MAE: ₹{mean_absolute_error(y_test, y_pred_test):,.2f}")
 print(f"   • RMSE: ₹{np.sqrt(mean_squared_error(y_test, y_pred_test)):,.2f}")
 
-print("\n📊 LOGISTIC REGRESSION (Premium/Budget Classification):")
+print("\n LOGISTIC REGRESSION (Premium/Budget Classification):")
 print(f"   • Accuracy: {accuracy_score(y_test_log, y_pred_log):.4f}")
 print(f"   • F1 Score: {f1_score(y_test_log, y_pred_log):.4f}")
 print(f"   • ROC AUC: {roc_auc_score(y_test_log, y_pred_proba):.4f}")
@@ -521,7 +521,7 @@ if __name__ == "__main__":
         if choice == '1':
             get_user_input_and_predict()
         elif choice == '2':
-            print("\n✅ Thank you for using the Used Car Price Prediction System!")
+            print("\n Thank you for using the Used Car Price Prediction System!")
             print("="*80)
             break
         else:
