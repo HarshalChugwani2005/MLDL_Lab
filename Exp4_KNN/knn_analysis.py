@@ -158,9 +158,9 @@ plt.savefig(os.path.join(script_dir, 'visualizations/knn_results.png'), dpi=150,
 plt.close()
 print("Saved: visualizations/knn_results.png")
 
-print("\n" + "=" * 60)
+#print("\n" + "=" * 60)
 print("SUMMARY")
-print("=" * 60)
+#print("=" * 60)
 best_metric = max(metric_results, key=lambda m: metric_results[m]['cv'])
 best_weight = max(weight_results, key=lambda w: weight_results[w]['cv'])
 print(f"""
