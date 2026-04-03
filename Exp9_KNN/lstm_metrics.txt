@@ -1,0 +1,20 @@
+Aim: Implement Recurrent Neural Network (RNN) / LSTM for time series data
+Experiment 9: LSTM on Air Quality UCI Dataset
+======================================================================
+
+Features used:
+  - PT08.S1(CO)
+  - PT08.S2(NMHC)
+  - PT08.S3(NOx)
+  - PT08.S4(NO2)
+  - PT08.S5(O3)
+
+Model:
+  LSTM(64) -> Dropout(0.2) -> LSTM(32) -> Dropout(0.2) -> Dense(16) -> Dense(5)
+
+Metrics (feature PT08.S1(CO) in original scale):
+  Test Loss (normalized): 0.006793
+  Test MAE (normalized): 0.067629
+  MAE (original): 62.29
+  RMSE (original): 83.80
+  R2 Score: 0.8230
