@@ -1,0 +1,23 @@
+Experiment 8: CNN on Fashion-MNIST
+Dataset source: https://github.com/zalandoresearch/fashion-mnist
+
+Test Loss: 0.203863
+Test Accuracy: 93.00%
+
+Classification Report:
+              precision    recall  f1-score   support
+
+ T-shirt/top       0.89      0.86      0.88      1000
+     Trouser       1.00      0.99      0.99      1000
+    Pullover       0.92      0.89      0.90      1000
+       Dress       0.91      0.95      0.93      1000
+        Coat       0.88      0.91      0.89      1000
+      Sandal       0.99      0.99      0.99      1000
+       Shirt       0.79      0.78      0.78      1000
+     Sneaker       0.96      0.98      0.97      1000
+         Bag       0.99      0.99      0.99      1000
+  Ankle boot       0.99      0.96      0.98      1000
+
+    accuracy                           0.93     10000
+   macro avg       0.93      0.93      0.93     10000
+weighted avg       0.93      0.93      0.93     10000

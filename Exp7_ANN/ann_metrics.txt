@@ -1,0 +1,40 @@
+Experiment 7: ANN Churn Prediction
+Dataset: Churn_Modelling.csv
+
+FEATURES USED:
+  - CreditScore
+  - Geography
+  - Gender
+  - Age
+  - Tenure
+  - Balance
+  - NumOfProducts
+  - HasCrCard
+  - IsActiveMember
+  - EstimatedSalary
+
+MODEL SUMMARY:
+  - Framework: TensorFlow/Keras
+  - Hidden layers: 128, 64, 32
+  - Activation: ReLU
+  - Output activation: Sigmoid
+  - Loss: Binary Crossentropy
+  - Optimizer: Adam
+  - Class weights: Enabled
+
+PERFORMANCE:
+  Accuracy : 0.7920
+  Precision: 0.4927
+  Recall   : 0.7469
+  F1 Score : 0.5938
+  ROC AUC  : 0.8579
+
+CLASSIFICATION REPORT:
+              precision    recall  f1-score   support
+
+           0     0.9255    0.8035    0.8602      1593
+           1     0.4927    0.7469    0.5938       407
+
+    accuracy                         0.7920      2000
+   macro avg     0.7091    0.7752    0.7270      2000
+weighted avg     0.8374    0.7920    0.8060      2000
