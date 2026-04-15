@@ -1,0 +1,17 @@
+Experiment 10: Autoencoder Image Denoising
+Dataset: MNIST IDX files
+
+MODEL:
+  - Type: Convolutional Autoencoder
+  - Input shape: 28x28x1
+  - Loss: Mean Squared Error
+  - Optimizer: Adam (lr=0.001)
+  - Epochs max: 2
+  - Batch size: 128
+  - Noise factor: 0.4
+
+RESULTS:
+  - Baseline MSE (Noisy vs Clean): 0.079675
+  - Denoised MSE (Autoencoder): 0.103979
+  - PSNR Noisy: 10.998 dB
+  - PSNR Denoised: 10.145 dB
